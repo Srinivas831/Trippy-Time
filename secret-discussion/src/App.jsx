@@ -1,8 +1,16 @@
+// import AllRoutes from "./Components/AllRoutes"
+import Navbar from "./Components/Navbar"
+import AllRoutes from "./Components/AllRoutes"
+import Footer from "./Components/Footer"
 
 function App() {
-
   return (
-   <h1>Hi</h1>
+    <>
+   {/* <Navbar /> */}
+   <AllRoutes />
+   <Footer />
+    </>
+
   )
 }
 
