@@ -20,7 +20,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
+import Im from "../assets/images/logo2.png"
 let lin = [
   { text: 'Home', path: '/' },
   { text: 'Explore', path: '/explore' },
@@ -53,7 +53,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Box  px={4}>
+      <Box  px={4} zIndex="10" width="-webkit-fill-available" position="fixed" bg="rgb(237,242,247)"  >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -68,7 +68,7 @@ export default function Navbar() {
                 width={200}
                 h={16}
                 size={'sm'}
-                src="../images/logo2.png"
+                src={Im}
                 alt="Logo"
               />
             </Box>

@@ -12,7 +12,9 @@ import {
 } from '@chakra-ui/react'
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-
+import Im from "../assets/images/logo2.png"
+import playstore from "../assets/images/google-play.png"
+import applestore from "../assets/images/appstore.png"
 
 const ListHeader = ({ children }) => {
   return (
@@ -104,13 +106,12 @@ export default function Footer() {
 
           <Stack align={'flex-start'}>
             <ListHeader>Install App</ListHeader>
-            {/* <AppStoreBadge /> */}
-            {/* <PlayStoreBadge /> */}
+      
             <Link to="https://play.google.com/store/games?device=windows&pli=1">
-            <Image src='../images/google-play.png' width="10rem" />
+            <Image src={playstore} width="10rem" />
             </Link>
             <Link to="https://play.google.com/store/games?device=windows&pli=1">
-            <Image src='../images/appstore.png' width="10rem" /></Link>
+            <Image src={applestore} width="10rem" /></Link>
           </Stack>
         </SimpleGrid>
       </Container>
@@ -127,7 +128,7 @@ export default function Footer() {
           spacing={4}
           justify={{ md: 'space-between' }}
           align={{ md: 'center' }}>
-          <Text> <Image src='../images/logo2.png' width="10rem" /> ©. All rights reserved</Text>
+          <Text> <Image src={Im} width="10rem" /> ©. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
