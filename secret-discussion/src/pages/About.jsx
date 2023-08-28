@@ -1,10 +1,9 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
 const About = () => {
   return (
     <>
-    <Navbar />
-    <div>About</div>
+    {/* <Navbar /> */}
+    <div style={{height:"300px"}}>About</div>
     </>
   )
 }

@@ -18,10 +18,11 @@ import {
   Image,
  
 } from '@chakra-ui/react';
+import { useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
-let lin = [
+import Im from "../assets/images/logo2.png"
+let links = [
   { text: 'Home', path: '/' },
   { text: 'Explore', path: '/explore' },
   { text: 'About', path: '/about' },
@@ -50,10 +51,22 @@ const NavLink = (props) => {
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [flag, setFlag] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+
+  const handleLogin = () => {
+    // Simulate login process
+    setFlag(false);
+  };
+
+  const handleLogout = () => {
+    // Simulate logout process
+    setIsLoggedIn(false);
+  };
   return (
     <>
-      <Box  px={4}>
+      <Box  px={4} zIndex="10" width="-webkit-fill-available" position="fixed" bg="rgb(237,242,247)"  >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -68,18 +81,28 @@ export default function Navbar() {
                 width={200}
                 h={16}
                 size={'sm'}
-                src="../images/logo2.png"
+                src={Im}
                 alt="Logo"
               />
             </Box>
-            <HStack as={'nav'} spacing={12} display={{ base: 'none', md: 'flex' }}>
-              {lin.map(({ text, path }) => (
-                <NavLink to={path} key={path}> {/* Use 'path' as key */}
+            <HStack as={'nav'} spacing={12} display={{ base: 'none', md: 'flex' }} fontSize={18} fontWeight={500}>
+              {links.map(({ text, path }) => (
+                <NavLink to={path} key={path} > {/* Use 'path' as key */}
                   {text}
                 </NavLink>
               ))}
             </HStack>
           </HStack>
+
+
+          {flag ? (
+          <Box>
+             <Link to="/login"> <Button style={{backgroundColor:"grey.300",color:"white"}} > LOGIN </Button> </Link> 
+             <Link to="/signup"> <Button  > SIGN UP </Button> </Link> 
+          </Box>
+         
+        ) : (
+
           <Flex alignItems={'center'}>
             <Menu>
               <MenuButton
@@ -99,25 +122,35 @@ export default function Navbar() {
               </MenuButton>
               <MenuList>
                 <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
+
+                <Button backgroundColor="black"  _hover={{ backgroundColor: "black" }} onClick={()=>setFlag(true)}> <MenuItem bg="black" color="white">Logout</MenuItem> </Button>
+
               </MenuList>
             </Menu>
           </Flex>
+)}
         </Flex>
-        {isOpen ? (
+
+                     {/* Conditional rendering for login/logout buttons */}
+      {/* {isLoggedIn ? (
+        <Button onClick={handleLogout}>Logout</Button>
+      ) : (
+        <Button onClick={handleLogin}>Login</Button>
+      )} */}
+
+        {isOpen && (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
-              {lin.map(({ text, path }) => (
+              {links.map(({ text, path }) => (
                 <NavLink to={path} key={path}> {/* Use 'path' as key */}
                   {text}
                 </NavLink>
               ))}
             </Stack>
           </Box>
-        ) : null}
+        )}
       </Box>
     </>
   );
 }
+// import Im from "../assets/images/logo2.png"
