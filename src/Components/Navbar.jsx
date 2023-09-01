@@ -98,7 +98,7 @@ export default function Navbar() {
           {flag ? (
           <Box>
              <Link to="/login"> <Button style={{backgroundColor:"grey",color:"white"}} > LOGIN </Button> </Link> 
-             <Link to="/signup"> <Button  > SIGN UP </Button> </Link> 
+             <Link to="/signup"> <Button style={{backgroundColor:"grey",color:"white", marginLeft:"13px"}} > SIGN UP </Button> </Link> 
           </Box>
          
         ) : (
@@ -124,7 +124,6 @@ export default function Navbar() {
                 {/* <MenuItem>Link 1</MenuItem> */}
 
                 <Button ml={"5px"} backgroundColor="black"  _hover={{ backgroundColor: "black" }} onClick={()=>setFlag(true)}> <MenuItem bg="black" color="white">Logout</MenuItem> </Button>
-
               </MenuList>
             </Menu>
           </Flex>

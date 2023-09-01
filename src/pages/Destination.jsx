@@ -117,12 +117,11 @@ return(
 
       <div className='dest'>
         
-    <h1><b>Explore Top Destination</b></h1>
+    <h1><b>Explore Top Destinations</b></h1>
  
+    {/* <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque tempora quo placeat numquam eos magnam? Aut culpa eos eius ullam?</h4> */}
     <br />
-    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque tempora quo placeat numquam eos magnam? Aut culpa eos eius ullam?</h4>
-    <br />
-    <input onChange={(e)=>{setSearch(e.target.value)}} type="text" placeholder=' search for places' style={{border:"2px solid slategrey", borderRadius:"5px", width:"20vw"}} />
+    <input className='inp' onChange={(e)=>{setSearch(e.target.value)}} type="text" placeholder='Search Your Dream Destiny' style={{border:"2px solid slategrey", borderRadius:"5px", width:"24vw", height:"6vh", textAlign:"center", fontWeight:"500"}} />
     </div>
         <Flex flexWrap='wrap'>
           {state.data.map((el) => (

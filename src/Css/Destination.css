@@ -23,3 +23,10 @@
     justify-content: center;
     margin-bottom: 30px;
 }
+
+@media screen and (min-width:300px) {
+    .inp{
+        width: "20px";
+        height: "20px";
+    }
+}

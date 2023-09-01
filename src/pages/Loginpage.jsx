@@ -74,25 +74,29 @@ const Loginpage = () => {
         }}
       >
         <form onSubmit={handleLogin}>
-          <Flex direction="column" alignItems="center">
+          <Flex direction="column" >
+           <label style={{fontSize:"22px"}}>Email</label>
             <Input
               name="email"
               type="email"
-              placeholder="Email"
+              // placeholder="Email"
               marginBottom="10px"
               value={credentials.email}
               onChange={handleChange}
-              style={{ width: '500px', color: 'white' }}
+              style={{ width: '350px', color: 'white' }}
             />
+      <br />
+      <label style={{fontSize:"22px"}}>Password</label>
             <Input
               name="password"
               type="password"
               marginBottom="10px"
-              placeholder="Password"
+              // placeholder="Password"
               value={credentials.password}
               onChange={handleChange}
-              style={{ width: '500px', color: 'white' }}
+              style={{ width: '350px', color: 'white' }}
             />
+            <br />
             <Button type="submit" colorScheme="teal">
               LOGIN
             </Button>

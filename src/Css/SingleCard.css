@@ -44,7 +44,14 @@ body {
     font-size: 20px;
     margin-bottom: 30px;
     font-size: 30px;
+    margin-top: 50px;
 
+}
+@media screen and (max-width: 450px) {
+  .bottom {
+    width: 80%; /* Adjust the width for mobile screens */
+    font-size: 24px; 
+  }
 }
 
 .innerradio{

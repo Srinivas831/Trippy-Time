@@ -95,9 +95,9 @@ const SingleCard = ({props}) => {
       </Swiper>
     </>
 
-    <div className='bottom'>
+    <div className='bottom' >
 
-          <Box fontSize={30} mt={20} mb={10}>
+          <Box >
             <RadioGroup>
               <Radio value='option1'fontSize={20}>{`${props.trips[0].price} for ${props.trips[0].days} days`}</Radio>
               <Radio value='option2'>{`${props.trips[1].price} for ${props.trips[1].days} days`}</Radio>
@@ -105,7 +105,7 @@ const SingleCard = ({props}) => {
             </RadioGroup>
           </Box>
 
-          <Center mt={6}>
+          <Center mt={2}>
             <Link to="/payment">
             <Button 
               colorScheme='blue'
