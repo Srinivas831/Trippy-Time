@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+## Vercel Link 
+https://trippy-time.vercel.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+### Navigation
 
-In the project directory, you can run:
+- **Home Page:** The landing page of the website.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g1rws6fm6cb7xk6yf8gj.png)
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j8my2s97ogu3rvy4hnrz.png)
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/52kubc2v4efbh78g7jt7.png)
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gv9rur15gtwjwuw3vjdb.png)
+- **Explore:** Browse through a list of destination spots with pagination and search functionality.
+-**About:** Learn more about Trippy Time and its mission.
+- **Contact:** Find contact information to get in touch with our team.
+- **Sign-up & Login:** User authentication for personalized experiences.
 
-### `npm start`
+### Explore Destination Spots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Users can view a list of destination spots.
+- Search functionality to find specific destinations.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m9s0vbe8jwj4yozfomlu.png)
+- Pagination for easy navigation through the destination list.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2jeirjahxackmihwfr98.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Destination Details
 
-### `npm test`
+- Clicking on a destination spot leads to a dedicated page with detailed information.
+- Explore images and learn about famous attractions at the destination.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2cq1jczv4rhpt4v0rrv3.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ihdy5k6zoelpy3g6utol.png)
 
-### `npm run build`
+### Booking
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Users interested in a destination spot can click on the "Book Now" button.
+- Payment options: Netbanking, UPI, and card payments.
+- After successful payment, users are redirected to the home page.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jdvlh5bjf2inmzlpqmsh.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Responsiveness
