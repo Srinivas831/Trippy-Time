@@ -1,6 +1,6 @@
 import React, { useReducer, useEffect, useState } from 'react';
 import axios from 'axios';
-import { Flex,HStack, Button, Image } from '@chakra-ui/react';
+import { Flex,HStack, Button, Image, Input } from '@chakra-ui/react';
 import EachCard from './EachCard';
 import "../Css/Destination.css"
 // import { useParams } from 'react-router-dom';
@@ -99,7 +99,7 @@ const Destination = () => {
   if (state.loading) {
 return(
   <>
-  <div style={{display:"flex", justifyContent:"center"}}>
+  <div style={{display:"flex", justifyContent:"center",alignItems:"center",height:"50vh"}}>
   <Image src='https://miro.medium.com/v2/resize:fit:1400/1*CsJ05WEGfunYMLGfsT2sXA.gif' />
   </div>
   </>
@@ -121,7 +121,20 @@ return(
  
     {/* <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque tempora quo placeat numquam eos magnam? Aut culpa eos eius ullam?</h4> */}
     <br />
-    <input className='inp' onChange={(e)=>{setSearch(e.target.value)}} type="text" placeholder='Search Your Dream Destiny' style={{border:"2px solid slategrey", borderRadius:"5px", width:"24vw", height:"6vh", textAlign:"center", fontWeight:"500"}} />
+    <Input
+  className='inp'
+  onChange={(e) => { setSearch(e.target.value) }}
+  type="text"
+  placeholder='Search Your Destiny'
+  style={{
+    border: "2px solid slategrey",
+    borderRadius: "5px",
+    width: { sm: "5vw", md: "20vw" },
+    height: "6vh",
+    textAlign: "center",
+    fontWeight: "500"
+  }}
+/>
     </div>
         <Flex flexWrap='wrap'>
           {state.data.map((el) => (

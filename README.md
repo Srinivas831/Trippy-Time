@@ -1,76 +1,70 @@
+# Getting Started with Create React App
 
-# Trippy Time - Travel Agency Website
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Trippy Time is a travel agency website that I created to showcase my technical and testing skills. This project allowed me to implement various web development techniques and demonstrate my abilities. The website is designed to help users explore exciting travel destinations and make bookings seamlessly.
+## Available Scripts
 
-## Vercel Link 
-https://trippy-time.vercel.app/
-## Features
+In the project directory, you can run:
 
-### Navigation
+### `npm start`
 
-- **Home Page:** The landing page of the website.
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g1rws6fm6cb7xk6yf8gj.png)
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j8my2s97ogu3rvy4hnrz.png)
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/52kubc2v4efbh78g7jt7.png)
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gv9rur15gtwjwuw3vjdb.png)
-- **Explore:** Browse through a list of destination spots with pagination and search functionality.
--**About:** Learn more about Trippy Time and its mission.
-- **Contact:** Find contact information to get in touch with our team.
-- **Sign-up & Login:** User authentication for personalized experiences.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Explore Destination Spots
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- Users can view a list of destination spots.
-- Search functionality to find specific destinations.
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m9s0vbe8jwj4yozfomlu.png)
-- Pagination for easy navigation through the destination list.
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2jeirjahxackmihwfr98.png)
+### `npm test`
 
-### Destination Details
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Clicking on a destination spot leads to a dedicated page with detailed information.
-- Explore images and learn about famous attractions at the destination.
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2cq1jczv4rhpt4v0rrv3.png)
+### `npm run build`
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ihdy5k6zoelpy3g6utol.png)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Booking
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- Users interested in a destination spot can click on the "Book Now" button.
-- Payment options: Netbanking, UPI, and card payments.
-- After successful payment, users are redirected to the home page.
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jdvlh5bjf2inmzlpqmsh.png)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Responsiveness
+### `npm run eject`
 
-The Trippy Time website is fully responsive, ensuring a seamless experience across various devices and screen sizes.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## How to Run
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-To run this website locally, follow these steps:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Open the `index.html` file in your web browser.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Technologies Used
+## Learn More
 
-- HTML
-- CSS
-- React Js
-- Chakra Ui
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Contributing
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-If you'd like to contribute to this project or report issues, please feel free to open an issue or submit a pull request.
+### Code Splitting
 
-## Contact
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-If you have any questions or need assistance, you can contact us at [hsrinivas802@gmail.com](mailto:hsrinivas802@gmail.com).
+### Analyzing the Bundle Size
 
-Enjoy exploring the world with Trippy Time!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
+### Making a Progressive Web App
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
+### Advanced Configuration
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

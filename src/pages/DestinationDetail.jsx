@@ -36,7 +36,7 @@ const DestinationDetail = () => {
   if (loading) {
     return(
       <>
-      <div style={{display:"flex", justifyContent:"center"}}>
+      <div style={{display:"flex", justifyContent:"center",height:"50vh"}}>
       <Image src='https://miro.medium.com/v2/resize:fit:1400/1*CsJ05WEGfunYMLGfsT2sXA.gif' />
       </div>
       </>

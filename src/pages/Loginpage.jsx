@@ -30,10 +30,13 @@ const Loginpage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (credentials.email === 's@gmail.com' && credentials.password === '12') {
+    const users = JSON.parse(localStorage.getItem('trippyusers')) || [];
+    const foundUser = users.find(user => user.email === credentials.email && user.password === credentials.password);
+  
+    if (foundUser) {
       console.log('Login successful');
       setShowSuccessAlert(true);
-
+      localStorage.setItem("trippyAuth",'yes');
       const timer = setInterval(() => {
         setCountdown((prevCountdown) => prevCountdown - 1);
       }, 1000); // Update countdown every second

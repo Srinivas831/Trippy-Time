@@ -64,18 +64,13 @@ const Home = () => {
   return (
     <>
     <div className='homeBg'>
-      {/* <Navbar /> */}
-      {/* <div style={{width:"40%",color:"black"}}>
-      <h1>Go where you feel most alive</h1>
-     <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, tempore id. Aperiam suscipit tenetur cum beatae, placeat, asperiores </h2>
-      </div> */}
         </div>
 
         <div style={{display:"flex", justifyContent:"center", padding:"40px 20px 20px 20px"}}>
           <h2 style={{fontSize:"30px", fontWeight:"600"}}>Why Choose Us</h2>
         </div>
       <Box p={10} textAlign={"center"} marginBottom={"20px"}>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} padding={"20px"}>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} padding={"20px"} fontSize={{md:"20px"}}>
         <Feature
           icon={<Icon as={FcAssistant} w={10} h={10}  />}
           title={'24/7 Support'}

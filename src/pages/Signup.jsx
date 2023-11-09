@@ -73,7 +73,16 @@ const Signup = () => {
     // If no errors, simulate signup success and show success message
     if (Object.keys(newErrors).length === 0) {
       setSignupError('');
+      const users = JSON.parse(localStorage.getItem('trippyusers')) || [];
+      const newUser = {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
+      };
+      users.push(newUser);
+      localStorage.setItem('trippyusers', JSON.stringify(users));
       setSignupSuccess(true);
+
     }
   };
 

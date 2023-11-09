@@ -22,6 +22,7 @@ import { useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Im from "../assets/images/logo2.png"
+import { useEffect } from 'react';
 let links = [
   { text: 'Home', path: '/' },
   { text: 'Explore', path: '/explore' },
@@ -52,22 +53,22 @@ const NavLink = (props) => {
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [flag, setFlag] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+ const isAuth=localStorage.getItem('trippyAuth');
 
+ function handlelogout() {
+  localStorage.removeItem('trippyAuth');
+  setFlag(false);
+ }
+useEffect(() => {
+  if (isAuth) {
+    setFlag(true);
+  }
+}, [])
 
-  const handleLogin = () => {
-    // Simulate login process
-    setFlag(false);
-  };
-
-  const handleLogout = () => {
-    // Simulate logout process
-    setIsLoggedIn(false);
-  };
   return (
     <>
       <Box  px={4} zIndex="10" width="-webkit-fill-available" position="fixed" bg="rgb(237,242,247)"  >
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -96,46 +97,39 @@ export default function Navbar() {
 
 
           {flag ? (
-          <Box>
-             <Link to="/login"> <Button style={{backgroundColor:"grey",color:"white"}} > LOGIN </Button> </Link> 
-             <Link to="/signup"> <Button style={{backgroundColor:"grey",color:"white", marginLeft:"13px"}} > SIGN UP </Button> </Link> 
-          </Box>
+           <Flex alignItems={'center'}>
+           <Menu>
+             <MenuButton
+               as={Button}
+               rounded={'full'}
+               variant={'link'}
+               cursor={'pointer'}
+               minW={0}
+             >
+               <Avatar
+                 size={'sm'}
+                 // src={
+                 //   'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
+                 // }
+                 alt="User Avatar" backgroundColor={"grey"}
+               />
+             </MenuButton>
+             <MenuList>
+               {/* <MenuItem>Link 1</MenuItem> */}
+
+               <Button ml={"5px"} backgroundColor="black"  _hover={{ backgroundColor: "black" }} onClick={handlelogout}> <MenuItem bg="black" color="white">Logout</MenuItem> </Button>
+             </MenuList>
+           </Menu>
+         </Flex>
          
         ) : (
 
-          <Flex alignItems={'center'}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                minW={0}
-              >
-                <Avatar
-                  size={'sm'}
-                  // src={
-                  //   'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                  // }
-                  alt="User Avatar" backgroundColor={"grey"}
-                />
-              </MenuButton>
-              <MenuList>
-                {/* <MenuItem>Link 1</MenuItem> */}
-
-                <Button ml={"5px"} backgroundColor="black"  _hover={{ backgroundColor: "black" }} onClick={()=>setFlag(true)}> <MenuItem bg="black" color="white">Logout</MenuItem> </Button>
-              </MenuList>
-            </Menu>
-          </Flex>
+          <Flex justifyContent={"space-between"} alignItems={"center"} spacing={10} >
+          <Link to="/login"> <Button w={"90%"} style={{backgroundColor:"grey",color:"white"}} > LOGIN </Button> </Link> 
+          <Link to="/signup"> <Button w={"90%"} style={{backgroundColor:"grey",color:"white"}} > SIGN UP </Button> </Link> 
+       </Flex>
 )}
         </Flex>
-
-                     {/* Conditional rendering for login/logout buttons */}
-      {/* {isLoggedIn ? (
-        <Button onClick={handleLogout}>Logout</Button>
-      ) : (
-        <Button onClick={handleLogin}>Login</Button>
-      )} */}
 
         {isOpen && (
           <Box pb={4} display={{ md: 'none' }}>

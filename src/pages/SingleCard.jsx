@@ -20,10 +20,20 @@ import {
   import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 import { Box, Text, Radio, RadioGroup, Button } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SingleCard = ({props}) => {
-  
+  const isAuth=localStorage.getItem("trippyAuth");
+  const nav=useNavigate();
+
+  function handlePayment(){
+    if(isAuth){
+      nav("/payment")
+    }
+    else{
+      nav("/login")
+    }
+  }
     return (
         <>
     <div className='single'>
@@ -97,7 +107,7 @@ const SingleCard = ({props}) => {
 
     <div className='bottom' >
 
-          <Box >
+          <Box style={{display:"flex", justifyContent:"center", alignItems:"center", width:"220px",fontSize:"32px", fontWeight:"700"}} >
             <RadioGroup>
               <Radio value='option1'fontSize={20}>{`${props.trips[0].price} for ${props.trips[0].days} days`}</Radio>
               <Radio value='option2'>{`${props.trips[1].price} for ${props.trips[1].days} days`}</Radio>
@@ -106,16 +116,17 @@ const SingleCard = ({props}) => {
           </Box>
 
           <Center mt={2}>
-            <Link to="/payment">
+            {/* <Link to="/payment"> */}
             <Button 
               colorScheme='blue'
+              onClick={handlePayment}
               size='lg'
               fontSize='md'
               fontWeight='bold'
               hover={{ bg: 'blue.500' }} >
               BOOK NOW
             </Button>
-            </Link>
+            {/* </Link> */}
           </Center>
         {/* </Box> */}
       </div>
