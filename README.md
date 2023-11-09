@@ -1,3 +1,4 @@
+Trippy Time is a travel agency website that I created to showcase my technical and testing skills. This project allowed me to implement various web development techniques and demonstrate my abilities. The website is designed to help users explore exciting travel destinations and make bookings seamlessly.
 ## Vercel Link 
 [https://trippy-time.vercel.app/](https://trippy-time.vercel.app/)
 
